@@ -6,14 +6,14 @@ contract AssociateProfitSplitter {
     address payable employee_one;
     address payable employee_two;
     address payable employee_three;
-    address payable owner;
+   
 
 
     constructor(address payable _one, address payable _two, address payable _three) public {
          employee_one = _one;
          employee_two = _two;
          employee_three = _three;
-	 owner = msg.sender;
+	
 
     }
 
@@ -24,7 +24,7 @@ contract AssociateProfitSplitter {
     function deposit() public payable {
         // Split `msg.value` into three
         uint amount = msg.value / 3;
-	require(owner == msg.sender);
+	
 
         // Transfer the amount to each employee
         employee_one.transfer(amount);
@@ -33,7 +33,7 @@ contract AssociateProfitSplitter {
 	
 
         // take care of a potential remainder by sending back to HR (`msg.sender`)
-        msg.sender.transfer(msg.value - (amount * 3));
+        msg.sender.transfer(msg.value - amount * 3);
     }
 
     function() external payable {
