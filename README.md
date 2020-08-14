@@ -1,9 +1,9 @@
 # Solidity
 ### Associate Profit Splitter:
 
-The AssociateProfitSplitter contract allows the Human Resources department to pay employees quickly and efficiently by splitting a payment evenly among three employees. 
+The AssociateProfitSplitter contract allows the Human Resources department to pay employees quickly and efficiently by splitting payment evenly among three employees. 
 
-We created "constructor function" to enter three account addresses when deploying. Also, In order to avoid hardcoding the employee addresses we set the employee addresses to equal the parameter values within the constructor. 
+We created "constructor function" to enter three account addresses when deploying. Also, In order to avoid hardcoding the employee addresses, we set the addresses to equal the parameter values within the constructor. 
 
 
 
